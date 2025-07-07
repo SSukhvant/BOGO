@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>YAY! It's BOGO</title>
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bogo-container">
+    <div class="bogo-title">YAY! It's BOGO</div>
+    <div class="bogo-box open" data-box="1" data-price="10.00">
+      <div class="bogo-header">
+        <div class="bogo-header-left">
+          <input type="radio" name="bogo" class="bogo-radio" checked>
+          <span>1 Unit</span>
+          <span class="discount-badge">10% Off</span>
+        </div>
+        <div style="text-align:right;">
+          <span class="price">$10.00 USD</span>
+          <span class="old-price">$24.00 USD</span>
+          <div class="subtext">Standard Price</div>
+        </div>
+      </div>
+      <div class="bogo-content">
+        <div class="selectors-row" style="margin-top:6px;">
+          <label style="min-width:27px;">Size</label>
+          <label style="min-width:66px;margin-left:17px;">Colour</label>
+        </div>
+        <div class="selectors-row">
+          <label>#1</label>
+          <select>
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+            <option>XL</option>
+          </select>
+          <select>
+            <option>Black</option>
+            <option>White</option>
+            <option>Blue</option>
+            <option>Red</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="bogo-box most-popular" data-box="2" data-price="18.00">
+      <div class="bogo-header">
+        <div class="bogo-header-left">
+          <input type="radio" name="bogo" class="bogo-radio">
+          <span>2 Unit</span>
+          <span class="discount-badge">20% Off</span>
+        </div>
+        <div style="text-align:right;">
+          <span class="price">$18.00 USD</span>
+          <span class="old-price">$24.00 USD</span>
+        </div>
+        <div class="most-popular-badge">Most Popular</div>
+      </div>
+      <div class="bogo-content">
+        <div class="selectors-row" style="margin-top:6px;">
+          <label style="min-width:27px;">Size</label>
+          <label style="min-width:66px;margin-left:17px;">Colour</label>
+        </div>
+        <div class="selectors-row">
+          <label>#1</label>
+          <select>
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+            <option>XL</option>
+          </select>
+          <select>
+            <option>Black</option>
+            <option>White</option>
+            <option>Blue</option>
+            <option>Red</option>
+          </select>
+        </div>
+        <div class="selectors-row">
+          <label>#2</label>
+          <select>
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+            <option>XL</option>
+          </select>
+          <select>
+            <option>Colour</option>
+            <option>Black</option>
+            <option>White</option>
+            <option>Blue</option>
+            <option>Red</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="bogo-box" data-box="3" data-price="24.00">
+      <div class="bogo-header">
+        <div class="bogo-header-left">
+          <input type="radio" name="bogo" class="bogo-radio">
+          <span>3 Unit</span>
+          <span class="discount-badge">30% Off</span>
+        </div>
+        <div style="text-align:right;">
+          <span class="price">$24.00 USD</span>
+          <span class="old-price">$24.00 USD</span>
+        </div>
+      </div>
+      <div class="bogo-content">
+        <div class="selectors-row" style="margin-top:6px;">
+          <label style="min-width:27px;">Size</label>
+          <label style="min-width:66px;margin-left:17px;">Colour</label>
+        </div>
+        <div class="selectors-row">
+          <label>#1</label>
+          <select>
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+            <option>XL</option>
+          </select>
+          <select>
+            <option>Black</option>
+            <option>White</option>
+            <option>Blue</option>
+            <option>Red</option>
+          </select>
+        </div>
+        <div class="selectors-row">
+          <label>#2</label>
+          <select>
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+            <option>XL</option>
+          </select>
+          <select>
+            <option>Colour</option>
+            <option>Black</option>
+            <option>White</option>
+            <option>Blue</option>
+            <option>Red</option>
+          </select>
+        </div>
+        <div class="selectors-row">
+          <label>#3</label>
+          <select>
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+            <option>XL</option>
+          </select>
+          <select>
+            <option>Colour</option>
+            <option>Black</option>
+            <option>White</option>
+            <option>Blue</option>
+            <option>Red</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="bogo-footer" style="color:#ff6699;">Free Delivery</div>
+    <div class="bogo-total-row">
+      <span>Total :</span>
+      <span id="bogo-total">$18.00 USD</span>
+    </div>
+    <button class="add-to-cart-btn"><span style="font-size:20px;vertical-align:middle;">+</span> Add to Cart</button>
+    <div class="powered-by">@ Powered by Pumper</div>
+  </div>
+  <script src="script.js" />
+</body>
+</html>

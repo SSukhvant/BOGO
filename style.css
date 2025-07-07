@@ -1,0 +1,307 @@
+    body {
+      background: #fff;
+      font-family: 'Inter', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #222;
+    }
+
+    .bogo-container {
+      max-width: 370px;
+      margin: 36px auto;
+      background: #fff;
+      border-radius: 12px;
+      padding: 0 0 18px 0;
+    }
+
+    .bogo-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 22px;
+      color: #ff6699;
+      margin: 36px 0 24px 0;
+      letter-spacing: 0.01em;
+      position: relative;
+      text-align: center;
+      gap: 12px;
+    }
+
+    .bogo-title::before,
+    .bogo-title::after {
+      content: "";
+      flex: 1;
+      height: 1.5px;
+      background: #f4d8e3;
+    }
+
+    .bogo-box {
+      border: 2px solid #f4d8e3;
+      border-radius: 8px;
+      margin: 0 0 18px 0;
+      background: #fff;
+      transition: border-color 0.3s, background 0.3s;
+      overflow: visible;
+      position: relative;
+      padding: 0;
+    }
+
+    .bogo-box.open {
+      border-color: #FF6B82;
+      background: #fff;
+      z-index: 2;
+    }
+
+    .bogo-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 22px 10px 16px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 500;
+      background: none;
+      border-radius: 8px 8px 0 0;
+      position: relative;
+    }
+
+    .bogo-header-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .bogo-radio {
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      border: 2px solid #FF6B82;
+      border-radius: 50%;
+      background: #fff;
+      margin: 0 10px 0 0;
+      position: relative;
+      outline: none;
+      transition: border-color 0.2s;
+      flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .bogo-radio:checked {
+      border-color: #FF6B82;
+      background: #fff;
+    }
+
+    .bogo-radio:checked::before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      background: #FF6B82;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    .bogo-header .price {
+      font-weight: 600;
+      font-size: 17px;
+      color: #222;
+      min-width: 92px;
+      text-align: right;
+      display: block;
+    }
+
+    .bogo-header .old-price {
+      color: #b0b0b0;
+      font-size: 13px;
+      text-decoration: line-through;
+      margin-left: 0;
+      font-weight: 400;
+      display: block;
+      margin-top: 2px;
+    }
+
+    .bogo-header .discount-badge {
+      color: #fff;
+      background: #FF6B82;
+      border-radius: 4px;
+      padding: 2.5px 10px 2.5px 10px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-left: 10px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .bogo-header .subtext {
+      font-size: 13px;
+      color: #888;
+      font-weight: 400;
+      margin-top: 4px;
+    }
+
+    .bogo-box.open .bogo-header {
+      font-weight: 600;
+    }
+
+    .bogo-box.open .bogo-header .price {
+      color: #FF6B82;
+    }
+
+    .bogo-box.most-popular .most-popular-badge {
+      display: block;
+      position: absolute;
+      top: -14px;
+      right: 18px;
+      background: #FF6B82;
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+      padding: 5px 22px 5px 22px;
+      border-radius: 0 0 8px 8px;
+      z-index: 3;
+      letter-spacing: 0.03em;
+      box-shadow: 0 2px 5px rgba(255, 102, 153, 0.1);
+      text-transform: uppercase;
+    }
+
+    .bogo-box.most-popular .most-popular-badge::before,
+    .bogo-box.most-popular .most-popular-badge::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 0;
+      height: 0;
+      border-top: 12px solid transparent;
+    }
+
+    .bogo-box.most-popular .most-popular-badge::before {
+      left: -12px;
+      border-right: 12px solid #D7445B;
+    }
+
+    .bogo-box.most-popular .most-popular-badge::after {
+      right: -12px;
+      border-left: 12px solid #D7445B;
+    }
+
+    .bogo-content {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: max-height 0.35s cubic-bezier(.4, 0, .2, 1), opacity 0.35s 0.1s, padding 0.35s;
+      padding: 0 22px;
+      background: none;
+    }
+
+    .bogo-box.open .bogo-content {
+      max-height: 200px;
+      opacity: 1;
+      padding-bottom: 18px;
+      transition: max-height 0.35s cubic-bezier(.4, 0, .2, 1), opacity 0.35s, padding 0.35s;
+    }
+
+    .selectors-row {
+      display: flex;
+      gap: 12px;
+      margin: 10px 0 0 0;
+      align-items: center;
+    }
+
+    .selectors-row label {
+      font-size: 13px;
+      color: #888;
+      margin-right: 2px;
+      min-width: 24px;
+      font-weight: 400;
+    }
+
+    .selectors-row select {
+      min-width: 88px;
+      padding: 6px 10px;
+      border-radius: 4px;
+      border: 1.5px solid #f4d8e3;
+      background: #fff;
+      font-size: 14px;
+      font-family: 'Inter', Arial, sans-serif;
+      margin-right: 12px;
+      margin-left: 0;
+      font-weight: 400;
+      outline: none;
+      box-shadow: none;
+      transition: border-color 0.2s;
+      color: #222;
+    }
+
+    .selectors-row select:focus {
+      border-color: #FF6B82;
+    }
+
+    .bogo-footer {
+      text-align: left;
+      padding: 12px 0 0 2px;
+      font-size: 15px;
+      color: #FF6B82;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+
+    .bogo-total-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 0 12px 0;
+      font-size: 16px;
+      color: #222;
+      font-weight: 600;
+    }
+
+    .bogo-total-row span:last-child {
+      color: #222;
+      font-weight: 700;
+    }
+
+    .add-to-cart-btn {
+      display: block;
+      width: 100%;
+      margin: 0 auto;
+      padding: 15px 0;
+      background: #FF6B82;
+      color: #fff;
+      font-weight: 600;
+      font-size: 19px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(255, 102, 153, 0.07);
+      transition: background 0.2s;
+      margin-top: 10px;
+      letter-spacing: 0.01em;
+    }
+
+    .add-to-cart-btn:hover {
+      background: #e8558a;
+    }
+
+    .powered-by {
+      text-align: right;
+      font-size: 13px;
+      color: #bbb;
+      margin-top: 12px;
+      margin-right: 4px;
+      letter-spacing: 0.01em;
+      font-style: italic;
+    }
+
+    @media (max-width: 540px) {
+      .bogo-container {
+        max-width: 99vw;
+      }
+
+      .bogo-box,
+      .add-to-cart-btn {
+        margin-left: 2vw;
+        margin-right: 2vw;
+      }
+    }
